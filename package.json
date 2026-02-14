@@ -1,0 +1,16 @@
+{
+  "name": "san-valentin-app",
+  "version": "1.0.0",
+  "description": "Detalle romántico de San Valentín convertido en app de escritorio.",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron .",
+    "dev": "npx serve -l 4173 .",
+    "package-win": "electron-packager . SanValentin --platform=win32 --arch=x64 --overwrite --icon=icon.ico"
+  },
+  "devDependencies": {
+    "electron": "^31.0.2",
+    "electron-packager": "^17.1.2",
+    "serve": "^14.2.3"
+  }
+}

@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Nuestro San Valentín ❤️</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <canvas id="hearts-bg" aria-hidden="true"></canvas>
+
+    <main class="card">
+      <section class="message">
+        <p class="intro">Para el amor de mi vida:</p>
+        <h1 id="typed-message" class="typed"></h1>
+
+        <p class="counter-title">Mi amor por ti comenzó hace...</p>
+        <div class="counter" role="timer" aria-live="polite">
+          <span id="days">0</span> días
+          <span id="hours">00</span> horas
+          <span id="minutes">00</span> minutos
+          <span id="seconds">00</span> segundos
+        </div>
+
+        <button id="surprise-btn" type="button">Pulsa para una sorpresa ✨</button>
+      </section>
+
+      <section class="tree-wrapper" aria-hidden="true">
+        <div class="tree-heart" id="tree-heart"></div>
+        <div class="tree-trunk"></div>
+      </section>
+    </main>
+
+    <div id="overlay" class="overlay" hidden>
+      <div class="overlay-content">
+        <h2>Te amo con todo mi corazón ❤️</h2>
+        <p>
+          Gracias por llegar a mi vida. Cada segundo contigo hace que todo sea más bonito.
+        </p>
+        <button id="close-overlay" type="button">Cerrar</button>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
