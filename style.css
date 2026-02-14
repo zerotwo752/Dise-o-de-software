@@ -4,7 +4,6 @@
   --card: #fff6ef;
   --text: #3a2f2f;
   --accent: #ff2f77;
-  --accent-2: #ff8fab;
 }
 
 * {
@@ -17,7 +16,7 @@ body {
   display: grid;
   place-items: center;
   overflow: hidden;
-  font-family: "Segoe UI", system-ui, sans-serif;
+  font-family: 'Segoe UI', system-ui, sans-serif;
   color: var(--text);
   background: radial-gradient(circle at top, #ff4d9b30, transparent 45%),
     linear-gradient(145deg, var(--bg-1), var(--bg-2));
@@ -83,58 +82,40 @@ body {
   transform: translateY(-2px);
 }
 
-.tree-wrapper {
+.scene-panel {
   position: relative;
-  display: grid;
-  place-items: center;
+  border-radius: 24px;
+  background: #f8eee7;
+  overflow: hidden;
+  border: 2px solid #00000014;
+  min-height: 450px;
 }
 
-.tree-trunk {
-  width: clamp(40px, 7vw, 70px);
-  height: clamp(130px, 28vh, 220px);
-  background: linear-gradient(90deg, #764113, #9d5f23);
-  border-radius: 12px;
-  align-self: end;
+#love-scene {
+  width: 100%;
+  height: 100%;
+  display: block;
 }
 
-.tree-heart {
-  width: clamp(230px, 36vw, 350px);
-  aspect-ratio: 1;
+.play-scene {
   position: absolute;
-  top: 6%;
-  filter: drop-shadow(0 14px 12px #ff326544);
+  left: 50%;
+  bottom: 16px;
+  transform: translateX(-50%);
+  border: 0;
+  width: 84px;
+  height: 84px;
+  border-radius: 999px;
+  font-size: 2.3rem;
+  background: #ffffffe3;
+  color: #403434;
+  cursor: pointer;
+  box-shadow: 0 8px 24px #00000030;
 }
 
-.tree-heart::before,
-.tree-heart::after {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background: radial-gradient(circle at 30% 30%, #ffb6c8, #ff446c 45%, #d70237 80%);
-  border-radius: 50%;
-}
-
-.tree-heart::before {
-  transform: translateX(-24%) rotate(45deg);
-}
-
-.tree-heart::after {
-  transform: translateX(24%) rotate(-45deg);
-}
-
-.heart-leaf {
-  position: absolute;
-  font-size: clamp(12px, 1.8vw, 20px);
-  animation: sway 4s ease-in-out infinite alternate;
-}
-
-@keyframes sway {
-  from {
-    transform: translateY(0) rotate(-10deg);
-  }
-  to {
-    transform: translateY(-8px) rotate(12deg);
-  }
+.play-scene[disabled] {
+  opacity: 0;
+  pointer-events: none;
 }
 
 .overlay {
@@ -169,11 +150,17 @@ body {
     min-height: auto;
   }
 
-  .tree-wrapper {
-    min-height: 270px;
+  .scene-panel {
+    min-height: 320px;
   }
 
   .typed {
     min-height: 110px;
+  }
+
+  .play-scene {
+    width: 70px;
+    height: 70px;
+    font-size: 2rem;
   }
 }
