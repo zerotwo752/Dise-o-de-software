@@ -127,6 +127,10 @@ body {
   z-index: 5;
 }
 
+
+.overlay[hidden] {
+  display: none;
+}
 .overlay-content {
   width: min(90vw, 580px);
   background: #fff;
